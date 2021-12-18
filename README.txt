@@ -1,21 +1,18 @@
-מטלה 0 – מונחה עצמים
+Authors: Arik Tatievski, 208997056
+	Roi Meshulam, 315635649
 
-סקר ספרות:
-https://towardsdatascience.com/elevator-optimization-in-python-73cab894ad30
-באתר זה אנו לומדים מהי מערכת המעליות המושלמת בין השיקולים למערכת המושלמת נתחשב ב:
-האם זה משרת את האדם שחיכה הכי הרבה זמן?
-האם תמיד נלך לקריאה הכי קרובה למעלית?
-https://www.popularmechanics.com/technology/infrastructure/a20986/the-hidden-science-of-elevators/
-מאמר המדבר על אופטימיזציה של מעליות נוגע ב - סקירה כללית של המצב הנוכחי של זמני ההמתנה למעלית. בדיקת זמן ההמתנה הממוצע הכולל. קביעת שעות במהלך היום בהן זמני ההמתנה ארוכים יותר. קביעת הקומות בהן זמני ההמתנה של המעלית ארוכים יותר. המאמר כולל 2 המלצות כיצד לייעל את תצורת המעליות כדי לצמצם את זמני ההמתנה.
-https://idogreenberg.neocities.org/linked%20files/Articles/Elevators%20weighting%20time%20optimization.pdf
-עבודה בנושא - כשאף אחד לא משתמש במעלית, איפה הכי כדאי לה לחכות, כדי למזער את ההמתנה הצפויה של הנוסע הבא?
+What is this project?
+This project is a direct continue to Ex_0 #https://github.com/ArikTatievski/OOP_Ex_0/tree/master/ex0
+This time we have programmed it as an offline algorithm using Python.
 
-מה זה אלגוריתם לא מקוון?
-אלגוריתם לא מקוון מקבל את כל נתוני הבעיה מההתחלה ונדרש להוציא תשובה יעילה ביותר על מנת לפתור את הבעיה שעל הפרק
+The way we made our project:
+We have made a few classes these next lines will explain them.
+Building/Elevator/CallForElevator - are 3 low-key classes that know how to do the most basic functions.(Creating a building, setting up the elevator settings etc..)
+MyAlgo - This is the main class that knows to accept a json file of calls(We mentioned its an offline elevator), and it allocates all the calls for elevators using the time stamp.
+In fact what we did is take our "offline conditions" and turn it into "online comditions" this way we promise the best results.
 
-אופן העבודה של האלגוריתם:
-אנו ניקח את כל הקריאות ונכניס אותן למערך של allCalls, לאחר מכן ניצור שני מערכים חדשים של "חותמת זמן" על אחת נבצע פעולות כדי לדעת איזו מעלית תבצע את הקריאה בצורה המהירה ביותר והשנייה תהווה את "חותמת הזמן" האמיתית של המעלית.
-אז איך בעצם נעשה את זה?
-ניקח קריאה, נחשב את הזמן שיקח לכל מעלית לטפל בה כולל זמן תחילת תנועה של מעלית ,פתיחת דלתות ומרחק הקריאה חלקי מהירות המעלית
-בכל פעם נכניס את הזמן הכולל לתוך כל תא במערך העזר שלנו, ככה נמצא את המעלית שיקח לה הכי קצת זמן לטפל ואז נשנה את רק את חותמת הזמן של המעלית בה בחרנו להשתמש
-בכך נבטיח שלכל הקריאות תמיד נשבץ את המעלית שתטפל בהן באופן המהיר ביותר
+How did we test our project?
+In every step and every function we made we did all the tests on the extreme conditions of the elevators to make sure all the allocations are being made properly
+
+
+Hope you find good usuage of this project!
